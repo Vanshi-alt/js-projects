@@ -26,12 +26,16 @@ console.log(tasks);
 })
 
 function renderTasks(task){
-    console.log(task);
+    const li = document.createElement("li");
+    li.setAttribute("data-id" , task.id);
+    li.innerHTML =`
+    <span>${task.text}</span>
+    <button>delete</button>
+    `;
+
+    list.addEventListener('click' , (e) => )
 }
 function saveTasks(){
     localStorage.setItem('tasks' , JSON.stringify(tasks));
 }
-
-
-
 })
